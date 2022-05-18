@@ -16,76 +16,91 @@
     <Filter Include="Header Files\internal">
       <UniqueIdentifier>{7729e3ae-efc1-4ca5-b15f-aea6fb9d3d0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\General">
+      <UniqueIdentifier>{9cf1e77f-9674-43b5-9b79-63c80d68ba49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{eeaa9751-8117-4b74-ade8-b16c5a4053ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Messages">
+      <UniqueIdentifier>{7633012b-5a30-4a30-9b5f-be11e38026ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Systems">
+      <UniqueIdentifier>{80bb35ed-dd3b-4834-97a2-b1704d59d81e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\General\Components">
+      <UniqueIdentifier>{7e29a6c7-74be-4c85-a5b5-db26322b0067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernel">
+      <UniqueIdentifier>{896434dc-671e-48d9-9c21-dfc0c81e9c97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\Engine\headers\Component.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Entity.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\EventManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\InputSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Kernel.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Keyboard.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Message.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\MessageDispatcher.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\MessageObserver.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Monobehaviour.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\MonobehaviourSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Renderer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\RenderSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Rigidbody.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\RigidbodySystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Scene.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\System.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Task.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\TimeSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Transform.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\Engine\headers\Window.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\internal\declarations.hpp">
       <Filter>Header Files\internal</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\internal\initialize.hpp">
       <Filter>Header Files\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\InputSystem.hpp">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Keyboard.hpp">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Message.hpp">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\MessageDispatcher.hpp">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\MessageObserver.hpp">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Component.hpp">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Entity.hpp">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\MonobehaviourSystem.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\RigidbodySystem.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\RenderSystem.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Monobehaviour.hpp">
+      <Filter>Header Files\General\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Renderer.hpp">
+      <Filter>Header Files\General\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Rigidbody.hpp">
+      <Filter>Header Files\General\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Scene.hpp">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Kernel.hpp">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\System.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Transform.hpp">
+      <Filter>Header Files\General\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\TimeSystem.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Task.hpp">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Window.hpp">
+      <Filter>Header Files\General</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

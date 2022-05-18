@@ -13,7 +13,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\Engine\headers\Component.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\Entity.hpp" />
-    <ClInclude Include="..\..\code\Engine\headers\EventManager.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\InputSystem.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\internal\declarations.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\internal\initialize.hpp" />
@@ -99,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\code\Engine\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\code\Engine\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers;..\..\libraries\bullet-3.17\src</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
