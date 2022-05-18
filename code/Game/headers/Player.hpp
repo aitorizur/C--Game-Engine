@@ -7,11 +7,10 @@
 #include <Monobehaviour.hpp>
 #include <memory>
 #include <InputSystem.hpp>
-#include <PositionResetElement.hpp>
 
 using namespace engine;
 
-class Player : public Monobehaviour, public PositionResetElement
+class Player : public Monobehaviour
 {
 	std::shared_ptr<Rigidbody> rigidbody;
 
@@ -34,12 +33,6 @@ public:
 	{
 		InputControl();
 		LimitMovement();
-	}
-
-	void ResetPosition() override
-	{
-		rigidbody->velocity = glm::vec3(0.0f);
-		gameobject->transform->position = initialPosition;
 	}
 
 	void InputControl();

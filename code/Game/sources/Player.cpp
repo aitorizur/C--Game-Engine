@@ -8,25 +8,21 @@ void Player::InputControl()
 	{
 		rigidbody->velocity.y = speed;
 		rigidbody->velocity.x = 0.0f;
-		gameobject->transform->rotation.y = -1.57;
 	}
 	if (InputSystem::GetAction("down"))
 	{
 		rigidbody->velocity.y = -speed;
 		rigidbody->velocity.x = 0.0f;
-		gameobject->transform->rotation.y = 1.57;
 	}
 	if (InputSystem::GetAction("right"))
 	{
 		rigidbody->velocity.x = speed;
 		rigidbody->velocity.y = 0.0f;
-		gameobject->transform->rotation.y = 3.14;
 	}
 	if (InputSystem::GetAction("left"))
 	{
 		rigidbody->velocity.x = -speed;
 		rigidbody->velocity.y = 0.0f;
-		gameobject->transform->rotation.y = 0;
 	}
 }
 

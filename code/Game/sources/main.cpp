@@ -8,8 +8,6 @@
 #include <PlayerDirection.hpp>
 #include <Keyboard.hpp>
 #include <Wall.hpp>
-#include <Enemy.hpp>
-#include <GameReseter.hpp>
 
 using namespace engine;
 
@@ -42,34 +40,15 @@ int main ()
     lefttWall->transform->scale.y = 13.0f;
 
     Player * player = testScene->CreateEntity()->AddComponent<Player>();
-    testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
 
-    Enemy* enemy1 = testScene->CreateEntity()->AddComponent<Enemy>();
-    enemy1->Setup(player->gameobject.get());
-    enemy1->gameobject->transform->position.x = -20.0f;
-    enemy1->gameobject->transform->position.y = 10.0f;
+    PlayerDirection * playerDirection1 = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
+    playerDirection1->gameobject->transform->position.x = -0.35f;
+    playerDirection1->gameobject->transform->scale = glm::vec3(0.2f);
+    
+    PlayerDirection * playerDirection2 = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
+    playerDirection2->gameobject->transform->position.x = 0.35f;
+    playerDirection2->gameobject->transform->scale = glm::vec3(0.2f);
 
-    Enemy* enemy2 = testScene->CreateEntity()->AddComponent<Enemy>();
-    enemy2->Setup(player->gameobject.get());
-    enemy2->gameobject->transform->position.x = 20.0f;
-    enemy2->gameobject->transform->position.y = 10.0f;
-
-    Enemy* enemy3 = testScene->CreateEntity()->AddComponent<Enemy>();
-    enemy3->Setup(player->gameobject.get());
-    enemy3->gameobject->transform->position.x = -20.0f;
-    enemy3->gameobject->transform->position.y = -10.0f;
-
-    Enemy* enemy4 = testScene->CreateEntity()->AddComponent<Enemy>();
-    enemy4->Setup(player->gameobject.get());
-    enemy4->gameobject->transform->position.x = 20.0f;
-    enemy4->gameobject->transform->position.y = -10.0f;
-
-    GameReseter* gameReseter = testScene->CreateEntity()->AddComponent<GameReseter>();
-    gameReseter->elementsToReset.push_back(player);
-    gameReseter->elementsToReset.push_back(enemy1);
-    gameReseter->elementsToReset.push_back(enemy2);
-    gameReseter->elementsToReset.push_back(enemy3);
-    gameReseter->elementsToReset.push_back(enemy4);
 
     kernel.Execute();
 

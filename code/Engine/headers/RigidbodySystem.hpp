@@ -8,6 +8,8 @@
 #include <list>
 #include <Entity.hpp>
 #include <TimeSystem.hpp>
+#include <btBulletDynamicsCommon.h>
+#include <memory>
 
 namespace engine
 {
@@ -17,8 +19,24 @@ namespace engine
 	class RigidbodySystem : public System
 	{
 		static std::list<Rigidbody*> rigidbodies;
+		std::shared_ptr<btDiscreteDynamicsWorld> dynamicsWorld;
 
 	public:
+
+		RigidbodySystem()
+		{
+			btDefaultCollisionConfiguration collisionConfiguration;
+			btCollisionDispatcher collisionDispatcher(&collisionConfiguration);
+			btDbvtBroadphase overlappingPairCache;
+			btSequentialImpulseConstraintSolver constraintSolver;
+
+			dynamicsWorld.reset(new btDiscreteDynamicsWorld(&collisionDispatcher, 
+														&overlappingPairCache, 
+														&constraintSolver, 
+														&collisionConfiguration));
+
+			dynamicsWorld->setGravity(btVector3(0, -9.8, 0));
+		}
 
 		/// <summary>
 		/// Anade un rigidbody a la lista de rigidbodies a actualizar
@@ -39,7 +57,6 @@ namespace engine
 			}
 		}
 
-		RigidbodySystem() = default;
 		~RigidbodySystem() = default;
 	};
 }
