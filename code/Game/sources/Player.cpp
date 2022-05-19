@@ -11,6 +11,6 @@ void Player::InputControl()
 {
 	if (InputSystem::GetAction("up"))
 	{
-		gameobject->transform->position.x += 2;
+		gameobject->transform->rotation.z += 0.2f;
 	}
 }

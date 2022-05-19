@@ -23,18 +23,17 @@ int main ()
     Scene * testScene = new Scene();
 
     Entity* bottomWall = testScene->CreateEntity();
-    bottomWall->transform->rotation.z = 0.0f;
-    bottomWall->transform->position.y = -13.0f;
+    bottomWall->transform->rotation.z = -0.2f;
+    bottomWall->transform->position.y = -10.0f;
     bottomWall->transform->scale.x = 10.0f;
     bottomWall->AddComponent<Wall>();
     
 
     Player * player = testScene->CreateEntity()->AddComponent<Player>();
-    player->gameobject->transform->position.x = 5.0f;
 
     PlayerDirection * playerDirection = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
-    playerDirection->gameobject->transform->position.x = -0.35f;
-    playerDirection->gameobject->transform->scale = glm::vec3(0.2f);
+    playerDirection->gameobject->transform->position.x = -1.5f;
+    playerDirection->gameobject->transform->scale = glm::vec3(0.5f);
     
     kernel.Execute();
 

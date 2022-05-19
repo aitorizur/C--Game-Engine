@@ -23,9 +23,8 @@ public:
 	void Start() override
 	{
 		rigidbody.reset(gameobject->AddComponent<Rigidbody>());
-		gameobject->AddComponent<Renderer>()->SetModel("../../assets/sphere.obj");
-		gameobject->transform->rotation.x = 1.57;
-		gameobject->transform->scale = glm::vec3(3.0f);
+		gameobject->AddComponent<Renderer>()->SetModel("../../assets/cube.obj");
+		gameobject->transform->scale = glm::vec3(1.0f);
 		initialPosition = gameobject->transform->position;
 	}
 
