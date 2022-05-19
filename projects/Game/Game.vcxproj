@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SDL_MAIN_HANDLED;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\code\Game\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers;..\..\libraries\GameEngine\headers;..\..\libraries\bullet-3.17\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\code\Game\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers;..\..\code\Engine\headers;..\..\libraries\bullet-3.17\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

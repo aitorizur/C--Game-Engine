@@ -19,44 +19,24 @@ namespace engine
 	class RigidbodySystem : public System
 	{
 		static std::list<Rigidbody*> rigidbodies;
-		std::shared_ptr<btDiscreteDynamicsWorld> dynamicsWorld;
+		static btDiscreteDynamicsWorld* dynamicsWorld;
 
 	public:
 
-		RigidbodySystem()
-		{
-			btDefaultCollisionConfiguration collisionConfiguration;
-			btCollisionDispatcher collisionDispatcher(&collisionConfiguration);
-			btDbvtBroadphase overlappingPairCache;
-			btSequentialImpulseConstraintSolver constraintSolver;
-
-			dynamicsWorld.reset(new btDiscreteDynamicsWorld(&collisionDispatcher, 
-														&overlappingPairCache, 
-														&constraintSolver, 
-														&collisionConfiguration));
-
-			dynamicsWorld->setGravity(btVector3(0, -9.8, 0));
-		}
+		RigidbodySystem();
+		~RigidbodySystem() = default;
 
 		/// <summary>
-		/// Anade un rigidbody a la lista de rigidbodies a actualizar
+		/// Anade un rigidbody a la lista de rigidbodies a actualizar. Tambien anade los cuerpos fisicos al mundo
 		/// </summary>
 		/// <param name="rigidbody">Puntero a rigidbody a actualizar</param>
 		static void AddRigidbody(Rigidbody* rigidbody)
 		{
 			rigidbodies.push_back(rigidbody);
+			dynamicsWorld->addRigidBody(rigidbody->body);
 		}
 
-		void Run(bool& shouldExit) override
-		{
-			for (auto& currentRigidbody : rigidbodies)
-			{
-				Transform* currentTransform = currentRigidbody->gameobject->transform.get();
-				currentTransform->position += currentRigidbody->velocity * TimeSystem::deltaTime;
-				currentTransform->rotation += currentRigidbody->angularVelocity * TimeSystem::deltaTime;
-			}
-		}
-
-		~RigidbodySystem() = default;
+		void Run(bool& shouldExit) override;
+		void UpdatePhysicWorld(float step);
 	};
 }

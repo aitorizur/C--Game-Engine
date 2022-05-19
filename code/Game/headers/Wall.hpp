@@ -15,6 +15,8 @@ public:
 	void Start() override
 	{
 		gameobject->AddComponent<Renderer>()->SetModel("../../assets/cube.obj");
+		Rigidbody * rb = gameobject->AddComponent<Rigidbody>();
+		rb->SetStatic();
 	}
 
 	Wall(Entity* entity) : Monobehaviour(entity) {}

@@ -29,14 +29,8 @@ public:
 		initialPosition = gameobject->transform->position;
 	}
 
-	void Update() override
-	{
-		InputControl();
-		LimitMovement();
-	}
-
+	void Update() override;
 	void InputControl();
-	void LimitMovement();
 
 	Player(Entity* entity) : Monobehaviour(entity) {}
 	~Player() = default;

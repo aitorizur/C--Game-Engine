@@ -22,34 +22,20 @@ int main ()
 
     Scene * testScene = new Scene();
 
-    Entity* topWall = testScene->CreateEntity();
-    topWall->AddComponent<Wall>();
-    topWall->transform->position.y = 13.0f;
-    topWall->transform->scale.x = 22.0f;
     Entity* bottomWall = testScene->CreateEntity();
-    bottomWall->AddComponent<Wall>();
+    bottomWall->transform->rotation.z = 0.0f;
     bottomWall->transform->position.y = -13.0f;
-    bottomWall->transform->scale.x = 22.0f;
-    Entity* righttWall = testScene->CreateEntity();
-    righttWall->AddComponent<Wall>();
-    righttWall->transform->position.x = 22.0f;
-    righttWall->transform->scale.y = 13.0f;
-    Entity* lefttWall = testScene->CreateEntity();
-    lefttWall->AddComponent<Wall>();
-    lefttWall->transform->position.x = -22.0f;
-    lefttWall->transform->scale.y = 13.0f;
+    bottomWall->transform->scale.x = 10.0f;
+    bottomWall->AddComponent<Wall>();
+    
 
     Player * player = testScene->CreateEntity()->AddComponent<Player>();
+    player->gameobject->transform->position.x = 5.0f;
 
-    PlayerDirection * playerDirection1 = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
-    playerDirection1->gameobject->transform->position.x = -0.35f;
-    playerDirection1->gameobject->transform->scale = glm::vec3(0.2f);
+    PlayerDirection * playerDirection = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
+    playerDirection->gameobject->transform->position.x = -0.35f;
+    playerDirection->gameobject->transform->scale = glm::vec3(0.2f);
     
-    PlayerDirection * playerDirection2 = testScene->CreateEntity(player->gameobject->transform.get())->AddComponent<PlayerDirection>();
-    playerDirection2->gameobject->transform->position.x = 0.35f;
-    playerDirection2->gameobject->transform->scale = glm::vec3(0.2f);
-
-
     kernel.Execute();
 
     return 0;
