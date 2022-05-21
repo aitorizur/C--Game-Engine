@@ -36,10 +36,10 @@ namespace engine
 			glm::vec3 worldPosition = currentRigidbody->gameobject->transform->position;
 			currentRigidbody->body->getWorldTransform().setOrigin(btVector3(worldPosition.x, worldPosition.y, worldPosition.z));
 
-			glm::vec3 worldRotation = currentRigidbody->gameobject->transform->rotation;
+			Transform * currentTransform = currentRigidbody->gameobject->transform.get();
 
-			btQuaternion rotation;
-			rotation.setEulerZYX(worldRotation.z, worldRotation.y, worldRotation.x);
+			btQuaternion rotation = btQuaternion(currentTransform->rotation.x, currentTransform->rotation.y, 
+												 currentTransform->rotation.z, currentTransform->rotation.w);
 
 			currentRigidbody->body->getWorldTransform().setRotation(rotation);
 		}
@@ -51,11 +51,9 @@ namespace engine
 			btVector3 worldPosition = currentRigidbody->body->getWorldTransform().getOrigin();
 			currentRigidbody->gameobject->transform->position = glm::vec3(worldPosition.x(), worldPosition.y(), worldPosition.z());
 
-			float x;
-			float y;
-			float z;
-			currentRigidbody->body->getWorldTransform().getRotation().getEulerZYX(z, y, x);
-			currentRigidbody->gameobject->transform->rotation = glm::vec3(x, y, z);
+			btQuaternion currentRotation = currentRigidbody->body->getWorldTransform().getRotation();
+			currentRigidbody->gameobject->transform->rotation = glm::quat((float)currentRotation.getW(), (float)currentRotation.getX(),
+																		  (float)currentRotation.getY(), (float)currentRotation.getZ());
 		}
 	}
 }

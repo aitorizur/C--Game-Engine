@@ -23,7 +23,6 @@ namespace engine
 
 	public:
 
-
 		RigidbodySystem();
 		~RigidbodySystem() = default;
 

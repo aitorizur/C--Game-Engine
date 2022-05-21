@@ -4,6 +4,7 @@
 
 #include <glm/glm.hpp>
 #include <Component.hpp>
+#include<glm/gtc/quaternion.hpp>
 
 namespace engine
 {
@@ -18,7 +19,7 @@ namespace engine
 
 		glm::vec3 position;
 		glm::vec3 scale;
-		glm::vec3 rotation;
+		glm::quat rotation;
 
 		Transform(Entity* entity);
 		~Transform() override = default;

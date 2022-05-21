@@ -78,12 +78,19 @@ namespace engine
         {
             Transform * currentTransform = currentRenderer->gameobject->transform.get();
 
-            currentRenderer->model->reset_transformation();
-            currentRenderer->model->translate(currentTransform->position);
-            currentRenderer->model->rotate_around_x(currentTransform->rotation.x);
-            currentRenderer->model->rotate_around_y(currentTransform->rotation.y);
-            currentRenderer->model->rotate_around_z(currentTransform->rotation.z); 
-            currentRenderer->model->scale(currentTransform->scale.x, currentTransform->scale.y, currentTransform->scale.z);
+            glt::Matrix44 modelMatrix = glt::Matrix44();
+
+            glt::Matrix44 rotation = glm::toMat4(currentTransform->rotation);
+            glt::Matrix44 position = glm::translate(modelMatrix, glm::vec3(currentTransform->position.x,
+                                                                           currentTransform->position.y,
+                                                                           currentTransform->position.z));
+            glt::Matrix44 scale = glm::scale(modelMatrix, glm::vec3(currentTransform->scale.x,
+                                                                    currentTransform->scale.y,
+                                                                    currentTransform->scale.z));
+
+            glt::Matrix44 transformation = position * rotation * scale;
+
+            currentRenderer->model->set_transformation(transformation);
         }
 
         // Se renderiza la escena y se intercambian los buffers de la ventana para

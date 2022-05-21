@@ -8,7 +8,7 @@ namespace engine
 
 		position = glm::vec3(0, 0, 0);
 		scale = glm::vec3(1, 1, 1);
-		rotation = glm::vec3(0, 0, 0);
+		rotation = glm::quat(1.0, 0.0, 0.0, 0.0);
 	}
 }
 
