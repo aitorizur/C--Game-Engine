@@ -32,5 +32,7 @@ namespace engine
 		{
 			body->setMassProps(value, btVector3(0, 0, 0));
 		}
+
+		void SetShapeSphere();
 	};
 }

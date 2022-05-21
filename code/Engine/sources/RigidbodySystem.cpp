@@ -30,6 +30,7 @@ namespace engine
 	/// </summary>
 	void RigidbodySystem::UpdatePhysicWorld(const float step)
 	{
+		
 		for (auto& currentRigidbody : rigidbodies)
 		{
 			glm::vec3 worldPosition = currentRigidbody->gameobject->transform->position;

@@ -102,6 +102,9 @@
     <ClInclude Include="..\..\code\Engine\headers\Window.hpp">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Constraint.hpp">
+      <Filter>Header Files\General\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\Engine\sources\finalize.cpp">
@@ -150,6 +153,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\Engine\sources\winmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Engine\sources\Constraint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,6 +5,8 @@
 #include <Transform.hpp>
 #include <RenderSystem.hpp>
 #include <Entity.hpp>
+#include <Math.hpp>
+#include <glm/gtx/quaternion.hpp>
 
 namespace engine
 {

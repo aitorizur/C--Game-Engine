@@ -146,7 +146,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\Game\headers\Player.hpp" />
-    <ClInclude Include="..\..\code\Game\headers\PlayerDirection.hpp" />
     <ClInclude Include="..\..\code\Game\headers\Wall.hpp" />
   </ItemGroup>
   <ItemGroup>

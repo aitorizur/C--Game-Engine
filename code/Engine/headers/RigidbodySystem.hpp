@@ -23,6 +23,7 @@ namespace engine
 
 	public:
 
+
 		RigidbodySystem();
 		~RigidbodySystem() = default;
 
@@ -34,6 +35,11 @@ namespace engine
 		{
 			rigidbodies.push_back(rigidbody);
 			dynamicsWorld->addRigidBody(rigidbody->body);
+		}
+
+		static void AddConstraint(btHingeConstraint* constraint)
+		{
+			dynamicsWorld->addConstraint(constraint);
 		}
 
 		void Run(bool& shouldExit) override;

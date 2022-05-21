@@ -14,6 +14,7 @@ namespace engine
 		physicsTransform.setOrigin(btVector3(gameobject->transform->position.x,
 											 gameobject->transform->position.y, 
 											 gameobject->transform->position.z));
+
 		btScalar initialMass = 1.0f;
 		btVector3 initialInertia(0, 0, 0);
 		shape->calculateLocalInertia(initialMass, initialInertia);
@@ -22,6 +23,13 @@ namespace engine
 		btRigidBody::btRigidBodyConstructionInfo constructionInfo(initialMass, motionState, shape, initialInertia);
 
 		body = new btRigidBody(constructionInfo);
+		body->setActivationState(DISABLE_DEACTIVATION);
 		RigidbodySystem::AddRigidbody(this);
 	}
+
+	void Rigidbody::SetShapeSphere()
+	{
+		body->setCollisionShape(new btSphereShape(gameobject->transform->scale.x));
+	}
+
 }

@@ -18,9 +18,6 @@
     <ClInclude Include="..\..\code\Game\headers\Player.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\Game\headers\PlayerDirection.hpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\code\Game\headers\Wall.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>

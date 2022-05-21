@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\Engine\headers\Component.hpp" />
+    <ClInclude Include="..\..\code\Engine\headers\Constraint.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\Entity.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\InputSystem.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\internal\declarations.hpp" />
@@ -35,6 +36,7 @@
     <ClInclude Include="..\..\code\Engine\headers\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\code\Engine\sources\Constraint.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\finalize.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\initialize.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\InputSystem.cpp" />
