@@ -146,11 +146,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\Engine\headers\MovingPlatform.hpp" />
+    <ClInclude Include="..\..\code\Game\headers\Key.hpp" />
+    <ClInclude Include="..\..\code\Game\headers\MovingDoor.hpp" />
     <ClInclude Include="..\..\code\Game\headers\Player.hpp" />
     <ClInclude Include="..\..\code\Game\headers\Wall.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\Game\sources\main.cpp" />
+    <ClCompile Include="..\..\code\Game\sources\MovingPlatform.cpp" />
     <ClCompile Include="..\..\code\Game\sources\Player.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -14,11 +14,11 @@ namespace engine
 	/// </summary>
 	class Rigidbody : public Component
 	{
+		btCollisionShape* shape;
 
 	public:
 
-		btRigidBody * body;
-		btCollisionShape * shape;
+		btRigidBody* body;
 
 		Rigidbody(Entity* entity);
 		~Rigidbody() = default;
@@ -58,6 +58,11 @@ namespace engine
 		void SetAngularFactor(const float x, const float y, const float z)
 		{
 			body->setAngularFactor(btVector3(x, y, z));
+		}
+
+		void SetFriction(float value)
+		{
+			body->setFriction(value);
 		}
 	};
 }

@@ -63,6 +63,7 @@ void Player::CreateWheels()
     wheel1Renderer->SetModel("../../assets/cube.obj");
     Rigidbody* wheelRB = wheel->AddComponent<Rigidbody>();
     wheelRB->SetShapeSphere();
+    wheelRB->SetFriction(100.0f);
 
     RLConstraint = wheel->AddComponent<Constraint>();
     RLConstraint->SetConstraint(*rigidbody->body, *wheelRB->body, btVector3(-2.9f, -1.0f, 2.0f),
@@ -78,6 +79,7 @@ void Player::CreateWheels()
     wheel2Renderer->SetModel("../../assets/cube.obj");
     Rigidbody* wheel2RB = wheel2->AddComponent<Rigidbody>();
     wheel2RB->SetShapeSphere();
+    wheel2RB->SetFriction(100.0f);
 
     RRConstraint = wheel2->AddComponent<Constraint>();
     RRConstraint->SetConstraint(*rigidbody->body, *wheel2RB->body, btVector3(2.9f, -1.0f, 2.0f),
@@ -93,6 +95,7 @@ void Player::CreateWheels()
     wheel3Renderer->SetModel("../../assets/cube.obj");
     Rigidbody* wheel3RB = wheel3->AddComponent<Rigidbody>();
     wheel3RB->SetShapeSphere();
+    wheel3RB->SetFriction(100.0f);
 
     FRConstraint = wheel3->AddComponent<Constraint>();
     FRConstraint->SetConstraint(*rigidbody->body, *wheel3RB->body, btVector3(2.9f, -1.0f, -2.0f),
@@ -108,6 +111,7 @@ void Player::CreateWheels()
     wheel4Renderer->SetModel("../../assets/cube.obj");
     Rigidbody* wheel4RB = wheel4->AddComponent<Rigidbody>();
     wheel4RB->SetShapeSphere();
+    wheel4RB->SetFriction(100.0f);
 
     FLConstraint = wheel4->AddComponent<Constraint>();
     FLConstraint->SetConstraint(*rigidbody->body, *wheel4RB->body, btVector3(-2.9f, -1.0f, -2.0f),

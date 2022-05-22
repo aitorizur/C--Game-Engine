@@ -31,6 +31,17 @@ public:
 
 private:
 
+	void CreateBody()
+	{
+		gameobject->transform->scale.x = 2.0f;
+		gameobject->transform->scale.z = 3.0f;
+		gameobject->transform->scale.y = 0.5f;
+		initialPosition = gameobject->transform->position;
+		gameobject->AddComponent<Renderer>();
+		rigidbody.reset(gameobject->AddComponent<Rigidbody>());
+		rigidbody->SetMass(10.0f);
+	}
+
 	void CreateWheels();
 	void CreateCatapult();
 
@@ -41,13 +52,7 @@ public:
 
 	void Start() override
 	{
-		gameobject->transform->scale.x = 2.0f;
-		gameobject->transform->scale.z = 3.0f;
-		gameobject->transform->scale.y = 0.5f;
-		initialPosition = gameobject->transform->position;
-		gameobject->AddComponent<Renderer>();
-		rigidbody.reset(gameobject->AddComponent<Rigidbody>());
-
+		CreateBody();
 		CreateWheels();
 		CreateCatapult();
 	}
