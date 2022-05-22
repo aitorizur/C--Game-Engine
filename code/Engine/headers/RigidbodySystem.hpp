@@ -36,6 +36,10 @@ namespace engine
 			dynamicsWorld->addRigidBody(rigidbody->body);
 		}
 
+		/// <summary>
+		/// Anade un Constraint al mundo
+		/// </summary>
+		/// <param name="constraint">Punto al constraint a actualizar</param>
 		static void AddConstraint(btHingeConstraint* constraint)
 		{
 			dynamicsWorld->addConstraint(constraint);

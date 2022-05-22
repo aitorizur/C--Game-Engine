@@ -5,6 +5,9 @@ namespace engine
 	std::list<Rigidbody*> RigidbodySystem::rigidbodies;
 	btDiscreteDynamicsWorld * RigidbodySystem::dynamicsWorld;
 
+	/// <summary>
+	/// Crea y prepara el mundo fisico
+	/// </summary>
 	RigidbodySystem::RigidbodySystem()
 	{
 		btDefaultCollisionConfiguration * collisionConfiguration = new btDefaultCollisionConfiguration();
