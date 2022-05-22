@@ -28,5 +28,9 @@ namespace engine
 			hingeConstraint->enableAngularMotor(true, targetVelocity, maxMotorImpulse);
 		}
 
+		void SetStill()
+		{
+			hingeConstraint->setLimit(0.0f, 0.0f);
+		}
 	};
 }

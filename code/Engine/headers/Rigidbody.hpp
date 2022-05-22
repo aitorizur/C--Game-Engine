@@ -30,9 +30,34 @@ namespace engine
 
 		void SetMass(const float value)
 		{
-			body->setMassProps(value, btVector3(0, 0, 0));
+			body->setMassProps(value, btVector3(1.0f, 1.0f, 1.0f));
 		}
 
 		void SetShapeSphere();
+
+		void SetGravity(const float value)
+		{
+			body->setGravity(btVector3(0.0f, value, 0.0f));
+		}
+
+		void SetVelocity(const float x, const float y, const float z)
+		{
+			body->setLinearVelocity(btVector3(x, y, z));
+		}
+
+		void SetLinearFactor(const float x, const float y, const float z)
+		{
+			body->setLinearFactor(btVector3(x, y, z));
+		}
+
+		void SetAngularVelocity(const float x, const float y, const float z)
+		{
+			body->setAngularVelocity(btVector3(x, y, z));
+		}
+
+		void SetAngularFactor(const float x, const float y, const float z)
+		{
+			body->setAngularFactor(btVector3(x, y, z));
+		}
 	};
 }

@@ -129,39 +129,55 @@ void Player::CreateCatapult()
     catapultConstraint->SetConstraint(*rigidbody->body, *catapultRB->body, btVector3(0.0f, 2.0f, -1.0f),
         btVector3(0.0f, 0.0f, -1.0f), btVector3(1.0f, 0.0f, 0.0f), btVector3(1.0f, 0.0f, 0.0f));
 
-    /*
-    Entity * leftwall = scene->CreateEntity();
-    leftwall->transform->position.x = -1.0f;
-    leftwall->transform->position.y = 3.0f;
-    leftwall->transform->position.z = 3.0f;
-    leftwall->transform->scale.x = 0.2f;
-    leftwall->transform->scale.y = 0.8f;
-    leftwall->transform->scale.z = 0.8f;
-    leftwall->AddComponent<Renderer>();
-    Rigidbody * leftWallRigidbody = leftwall->AddComponent<Rigidbody>();
+    
+    Entity * leftWall = scene->CreateEntity();
+    leftWall->transform->position.x = -1.0f;
+    leftWall->transform->position.y = 3.0f;
+    leftWall->transform->position.z = 3.0f;
+    leftWall->transform->scale.x = 0.2f;
+    leftWall->transform->scale.y = 0.8f;
+    leftWall->transform->scale.z = 0.8f;
+    leftWall->AddComponent<Renderer>();
+    Rigidbody * leftWallRigidbody = leftWall->AddComponent<Rigidbody>();
+    leftWallRigidbody->SetMass(0.05f);
     Constraint * leftWallConstraint = catapult->AddComponent<Constraint>();
 
     leftWallConstraint->SetConstraint(*catapultRB->body, *leftWallRigidbody->body, btVector3(-1.0f, 0.5f, 3.0f),
+                                      btVector3(0.0f, 0.0f, 0.0f), btVector3(0.0f, 0.0f, 1.0f), btVector3(0.0f, 0.0f, 1.0f));
+    leftWallConstraint->SetStill();
+
+    Entity* rightWall = scene->CreateEntity();
+    rightWall->transform->position.x = 1.0f;
+    rightWall->transform->position.y = 3.0f;
+    rightWall->transform->position.z = 3.0f;
+    rightWall->transform->scale.x = 0.2f;
+    rightWall->transform->scale.y = 0.8f;
+    rightWall->transform->scale.z = 0.8f;
+    rightWall->AddComponent<Renderer>();
+    Rigidbody* rightWallRigidbody = rightWall->AddComponent<Rigidbody>();
+    rightWallRigidbody->SetMass(0.05f);
+    Constraint* rightWallConstraint = catapult->AddComponent<Constraint>();
+
+    rightWallConstraint->SetConstraint(*catapultRB->body, *rightWallRigidbody->body, btVector3(1.0f, 0.5f, 3.0f),
         btVector3(0.0f, 0.0f, 0.0f), btVector3(0.0f, 0.0f, 1.0f), btVector3(0.0f, 0.0f, 1.0f));
+    rightWallConstraint->SetStill();
 
     
-    Entity* rightwall = scene->CreateEntity();
-    rightwall->transform->position.x = 1.5f;
-    rightwall->transform->position.y = 1.0f;
-    rightwall->transform->position.z = 0.8f;
-    rightwall->transform->scale.x = 0.5f;
-    rightwall->transform->scale.y = 2.0f;
-    rightwall->transform->scale.z = 0.1f;
-    rightwall->AddComponent<Renderer>();
+    Entity* backWall = scene->CreateEntity();
+    backWall->transform->position.x = 0.0f;
+    backWall->transform->position.y = 3.0f;
+    backWall->transform->position.z = 4.0f;
+    backWall->transform->scale.x = 1.0f;
+    backWall->transform->scale.y = 0.5f;
+    backWall->transform->scale.z = 0.2f;
+    backWall->AddComponent<Renderer>();
+    Rigidbody* backWallRigidbody = backWall->AddComponent<Rigidbody>();
+    backWallRigidbody->SetMass(0.05f);
+    Constraint* backWallConstraint = catapult->AddComponent<Constraint>();
 
-    Entity* backwall = scene->CreateEntity();
-    backwall->transform->position.x = 0.0f;
-    backwall->transform->position.y = 3.0f;
-    backwall->transform->position.z = 1.0f;
-    backwall->transform->scale.x = 2.0f;
-    backwall->transform->scale.y = 2.0f;
-    backwall->transform->scale.z = 0.1f;
-    backwall->AddComponent<Renderer>();*/
+    backWallConstraint->SetConstraint(*catapultRB->body, *backWallRigidbody->body, btVector3(0.0f, 0.5f, 4.0f),
+        btVector3(0.0f, 0.0f, 0.0f), btVector3(1.0f, 0.0f, 0.0f), btVector3(1.0f, 0.0f, 0.0f));
+    backWallConstraint->SetStill();
 
     Entity* ball = scene->CreateEntity();
     ball->transform->position.y = 4.0f;

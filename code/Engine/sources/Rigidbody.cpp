@@ -27,7 +27,7 @@ namespace engine
 		RigidbodySystem::AddRigidbody(this);
 	}
 
-	void Rigidbody::SetShapeSphere()
+	inline void Rigidbody::SetShapeSphere()
 	{
 		body->setCollisionShape(new btSphereShape(gameobject->transform->scale.x));
 	}

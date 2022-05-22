@@ -25,7 +25,7 @@ namespace engine
         // Se crea el render node de OpenGL Toolkit:
         rendererNode.reset(new glt::Render_Node());
 
-        std::shared_ptr< glt::Camera > camera(new glt::Camera(20.f, 1.f, 50.f, 1));
+        std::shared_ptr< glt::Camera > camera(new glt::Camera(20.f, 1.f, 1000.f, 1));
         std::shared_ptr< glt::Light  > light(new glt::Light);
 
         rendererNode->add("camera", camera);

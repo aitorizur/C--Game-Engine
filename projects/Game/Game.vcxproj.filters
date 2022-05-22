@@ -21,6 +21,9 @@
     <ClInclude Include="..\..\code\Game\headers\Wall.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\MovingPlatform.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\Game\sources\main.cpp">

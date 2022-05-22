@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\code\Engine\headers\MovingPlatform.hpp" />
     <ClInclude Include="..\..\code\Game\headers\Player.hpp" />
     <ClInclude Include="..\..\code\Game\headers\Wall.hpp" />
   </ItemGroup>
