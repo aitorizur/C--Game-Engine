@@ -79,6 +79,7 @@ int main ()
 
     Entity* movingPlatformObject = testScene->CreateEntity();
     movingPlatformObject->AddComponent<MovingPlatform>()->playerTransform.reset(player->gameobject->transform.get());
+
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     kernel.Execute();

@@ -5,7 +5,7 @@ namespace engine
 {
 	Renderer::Renderer(Entity* entity) : Component(entity)
 	{
-		model.reset(new glt::Model_Obj("cube.obj"));
+		model.reset(new glt::Model_Obj("../../assets/cube.obj"));
 
 		if (gameobject->transform->parent != nullptr)
 		{
