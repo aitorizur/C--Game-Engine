@@ -27,6 +27,8 @@
     <ClInclude Include="..\..\code\Engine\headers\Renderer.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\RenderSystem.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\Rigidbody.hpp" />
+    <ClInclude Include="..\..\code\Engine\headers\Rigidbody2D.hpp" />
+    <ClInclude Include="..\..\code\Engine\headers\Rigidbody2DSystem.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\RigidbodySystem.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\Scene.hpp" />
     <ClInclude Include="..\..\code\Engine\headers\System.hpp" />
@@ -48,6 +50,8 @@
     <ClCompile Include="..\..\code\Engine\sources\Renderer.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\RenderSystem.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\Rigidbody.cpp" />
+    <ClCompile Include="..\..\code\Engine\sources\Rigidbody2D.cpp" />
+    <ClCompile Include="..\..\code\Engine\sources\Rigidbody2DSystem.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\RigidbodySystem.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\TimeSystem.cpp" />
     <ClCompile Include="..\..\code\Engine\sources\Transform.cpp" />
@@ -101,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\code\Engine\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers;..\..\libraries\bullet-3.17\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\code\Engine\headers;..\..\libraries\sdl2-vs\include;..\..\libraries\opengl-toolkit\headers;..\..\libraries\bullet-3.17\src;..\..\libraries\box2d-2.4.1\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>

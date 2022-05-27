@@ -28,11 +28,11 @@
     <Filter Include="Header Files\Systems">
       <UniqueIdentifier>{80bb35ed-dd3b-4834-97a2-b1704d59d81e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\General\Components">
-      <UniqueIdentifier>{7e29a6c7-74be-4c85-a5b5-db26322b0067}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Kernel">
       <UniqueIdentifier>{896434dc-671e-48d9-9c21-dfc0c81e9c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{7e29a6c7-74be-4c85-a5b5-db26322b0067}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -73,13 +73,13 @@
       <Filter>Header Files\Systems</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Monobehaviour.hpp">
-      <Filter>Header Files\General\Components</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Renderer.hpp">
-      <Filter>Header Files\General\Components</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Rigidbody.hpp">
-      <Filter>Header Files\General\Components</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Scene.hpp">
       <Filter>Header Files\General</Filter>
@@ -91,7 +91,7 @@
       <Filter>Header Files\Systems</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Transform.hpp">
-      <Filter>Header Files\General\Components</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\TimeSystem.hpp">
       <Filter>Header Files\Systems</Filter>
@@ -103,7 +103,13 @@
       <Filter>Header Files\General</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\Engine\headers\Constraint.hpp">
-      <Filter>Header Files\General\Components</Filter>
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Rigidbody2DSystem.hpp">
+      <Filter>Header Files\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\Engine\headers\Rigidbody2D.hpp">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +162,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\Engine\sources\Constraint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Engine\sources\Rigidbody2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\Engine\sources\Rigidbody2DSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,6 +5,7 @@
 #include <list>
 #include <Task.hpp>
 #include <RigidbodySystem.hpp>
+#include <Rigidbody2DSystem.hpp>
 #include <RenderSystem.hpp>
 #include <TimeSystem.hpp>
 #include <MonobehaviourSystem.hpp>
@@ -25,6 +26,7 @@ namespace engine
 
 		TimeSystem timeSystem;
 		MonobehaviourSystem monobehaviourSystem;
+		Rigidbody2DSystem rigidbody2DSystem;
 		RigidbodySystem rigidbodySystem;
 		RenderSystem renderSystem;
 		InputSystem inputSystem;

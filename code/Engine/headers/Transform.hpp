@@ -23,5 +23,10 @@ namespace engine
 
 		Transform(Entity* entity);
 		~Transform() override = default;
+
+		const glm::vec3 GetEulerRotation()
+		{
+			return glm::eulerAngles(rotation);
+		}
 	};
 }

@@ -7,6 +7,7 @@ namespace engine
 	{
 		tasks.push_back(&timeSystem);
 		tasks.push_back(&monobehaviourSystem);
+		tasks.push_back(&rigidbody2DSystem);
 		tasks.push_back(&rigidbodySystem);
 		tasks.push_back(&renderSystem);
 		tasks.push_back(&inputSystem);
